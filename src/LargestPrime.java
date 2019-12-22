@@ -1,61 +1,57 @@
 public class LargestPrime {
+    public static void main(String[] args) {
+        System.out.println(getLargestPrime(45));
+    }
+
     // write your code here
+
     public static int getLargestPrime(int number) {
-        // if negative, no prime numbers:
-        if (number < 0) {
-            return -1;
-        }
+        if (number < 0 || number == 0 || number == 1) return -1;
+        int n = number;
+        int factor = 2;
 
-    //find factor
-        for(int i=number; i>1; i--){
-            if(number%i==0){ //is a factor
-                //check if is a prime
-                //if has factors then is not a prime
+        while (n > 1) {
+            if (n % factor == 0) {
+                n = n / factor;
+            } else {
+                int next = factor+1;
 
-                int current;
-                for( current =i-1; current>1; current--){
-                    if(i%current==0){
-                        //is not a factor of a factor
-                        //next current
-                        continue;
+                boolean isPrime = true;
+                for (int i=next-1; i>1; i--){
+                    if(next%i==0){
+                        isPrime= false;
                     }
                 }
-                System.out.println(current);
 
-                if (current !=1 ){
-                    return current;
+                if (!isPrime){
+                    next++;
                 }
+                factor = next;
             }
         }
 
-        return -2;
+
+        return factor;
     }
 
-
-
-
-
-//        for(int i=number; i>1; i--){
-//            if(number %i==0 && isPrime(i)){
-//                return i;
+//    public static int nextPrime(int n){
+//       int next = n+1;
+//
+//       if (!isPrime(next)){
+//           next++;
+//       }
+//
+//        return next;
+//    }
+//
+//    public static boolean isPrime(int n){
+//        for (int i=n-1; i>1; i--){
+//            if(n%i==0){
+//                return false;
 //            }
 //        }
-//        return 0;
+//
+//        return true;
+//    }
 
-    public static boolean isPrime(int i){
-
-
-            if(i<=1)
-                return false;
-
-            for (int j = i-1 ; j > 1; j--) {
-                if (i % j == 0) {
-                    return false;
-                }
-
-            }
-
-            return true;
-
-    }
 }
