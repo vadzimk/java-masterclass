@@ -1,4 +1,4 @@
-package Generics;
+package generics;
 
 public class Main {
 
@@ -20,7 +20,5 @@ public class Main {
         footballLeagueTable.printTeams();
         System.out.println();
         baseballLeagueTable.printTeams();
-
-
     }
 }

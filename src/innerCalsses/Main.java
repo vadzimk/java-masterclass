@@ -1,4 +1,4 @@
-package InnerCalsses;
+package innerCalsses;
 
 public class Main {
 

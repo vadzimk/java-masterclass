@@ -1,4 +1,4 @@
-package AbstractClasses;
+package abstractClasses;
 
 public class Node extends ListItem {
 

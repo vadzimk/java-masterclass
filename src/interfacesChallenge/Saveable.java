@@ -58,7 +58,7 @@ public static ArrayList<String> readValues() {
 
   */
 
-package InterfacesChallenge;
+package interfacesChallenge;
 
 
  import java.util.List;

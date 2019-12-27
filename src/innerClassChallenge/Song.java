@@ -1,4 +1,4 @@
-package InnerClassChallenge;
+package innerClassChallenge;
 
 /**
  * Created by dev on 18/09/15.

@@ -1,4 +1,4 @@
-package InterfacesChallenge;
+package interfacesChallenge;
 
 
 import java.util.ArrayList;

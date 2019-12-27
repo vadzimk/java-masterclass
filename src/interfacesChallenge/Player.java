@@ -1,8 +1,7 @@
-package InterfacesChallenge;
+package interfacesChallenge;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Player implements Saveable {
     private String name;
